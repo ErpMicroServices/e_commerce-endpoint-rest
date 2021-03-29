@@ -14,7 +14,7 @@ import java.util.UUID;
 @Entity
 @Data
 @ToString
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = true)
 public class WebContentType extends AbstractPersistable<UUID> {
 	@NotBlank
 	@NotNull

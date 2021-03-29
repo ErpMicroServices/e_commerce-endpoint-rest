@@ -14,7 +14,7 @@ import java.util.UUID;
 @Entity
 @Data
 @ToString
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = true)
 public class UserAgentMethodType extends AbstractPersistable<UUID> {
 	@NotBlank
 	@NotNull
