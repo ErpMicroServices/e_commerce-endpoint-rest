@@ -1,4 +1,4 @@
-package org.erpmicroservices.e_commerce.endpoint.rest.e_commerceendpointrest;
+package org.erpmicroservices.e_commerce.endpoint.rest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
