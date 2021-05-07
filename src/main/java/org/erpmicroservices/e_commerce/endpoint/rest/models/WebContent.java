@@ -23,6 +23,8 @@ public class WebContent extends AbstractPersistable<UUID> {
 	@NotBlank
 	@NotNull
 	private String description;
+	@NotBlank
+	@NotNull
 	private String fileLocation;
 	@ManyToOne
 	@NotNull
