@@ -36,4 +36,7 @@ public class WebContent extends AbstractPersistable<UUID> {
 	@OneToMany
 	@JoinColumn(name = "associate_of_web_content_id")
 	private List<WebContentAssociation> associateOf = new ArrayList<>();
+	@OneToMany
+	@JoinColumn(name = "web_content_id")
+	private List<ObjectUsage> usages = new ArrayList<>();
 }
