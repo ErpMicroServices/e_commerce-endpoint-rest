@@ -10,7 +10,7 @@
 	</parent >
 	<groupId >org.erpmicroservices.e_commerce.endpoint.rest</groupId >
 	<artifactId >e_commerce-endpoint-rest</artifactId >
-	<version >0.0.1-SNAPSHOT</version >
+	<version >1.0.0-SNAPSHOT</version >
 	<name >e_commerce-endpoint-rest</name >
 	<description >Restful HATEOAS endpoints for E-Commerce</description >
 	<scm >
@@ -18,7 +18,7 @@
 		<developerConnection >scm:git:ssh://git@github.com/ErpMicroServices/e_commerce-endpoint-rest.git
 		</developerConnection >
 		<url >scm:git:ssh://git@github.com/ErpMicroServices/e_commerce-endpoint-rest.git</url >
-		<tag >HEAD</tag >
+		<tag >e_commerce-endpoint-rest-1.0.0</tag >
 	</scm >
 
 	<distributionManagement >
