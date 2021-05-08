@@ -41,4 +41,6 @@ public class WebContent extends AbstractPersistable<UUID> {
 	@OneToMany
 	@JoinColumn(name = "web_content_id")
 	private List<ObjectUsage> usages = new ArrayList<>();
+	@OneToMany(mappedBy = "webContent")
+	private List<ServerHit> serverHits = new ArrayList<>();
 }

@@ -10,42 +10,40 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
 @Data
 @ToString
 @EqualsAndHashCode
-public class ServerHit extends AbstractPersistable<UUID> {
+public class Visit extends AbstractPersistable<UUID> {
 
 	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
 	@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssZ")
 	@NotNull
-	private ZonedDateTime dateTime;
+	private ZonedDateTime fromDate;
 
-	private long numberOfBytes = 0;
+	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
+	@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssZ")
+	private ZonedDateTime thruDate;
+
+	@NotNull
+	@NotEmpty
+	private String cookie;
+
+	private UUID partyId;
 
 	@NotNull
 	@ManyToOne
-	@JoinColumn(name = "user_login_id")
-	private UserLogin userLogin;
+	@JoinColumn(name = "web_address_id")
+	private WebAddress webAddress;
 
-	@NotNull
-	@ManyToOne
-	private ServerHitStatusType statusType;
-
-	@NotNull
-	@ManyToOne
-	@JoinColumn(name = "web_content_id")
-	private WebContent webContent;
-
-	@NotNull
-	@ManyToOne
-	@JoinColumn(name = "visit_id")
-	private Visit visit;
-
-	@NotNull
-	private UUID ipAddressId;
+	@OneToMany(mappedBy = "visit")
+	private List<ServerHit> serverHits = new ArrayList<>();
 }

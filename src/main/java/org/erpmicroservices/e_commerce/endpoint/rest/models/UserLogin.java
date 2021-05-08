@@ -41,4 +41,7 @@ public class UserLogin extends AbstractPersistable<UUID> {
 	@JoinColumn(name = "user_login_id")
 	@OrderBy(value = "type")
 	private List<WebUserPreference> preferences = new ArrayList<>();
+
+	@OneToMany(mappedBy = "userLogin")
+	private List<ServerHit> serverHits = new ArrayList<>();
 }
