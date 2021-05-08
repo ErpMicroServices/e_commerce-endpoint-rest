@@ -13,6 +13,21 @@
 	<version >0.0.1-SNAPSHOT</version >
 	<name >e_commerce-endpoint-rest</name >
 	<description >Restful HATEOAS endpoints for E-Commerce</description >
+	<scm >
+		<connection >scm:git:ssh://git@github.com/ErpMicroServices/e_commerce-endpoint-rest.git</connection >
+		<developerConnection >scm:git:ssh://git@github.com/ErpMicroServices/e_commerce-endpoint-rest.git
+		</developerConnection >
+		<url >scm:git:ssh://git@github.com/ErpMicroServices/e_commerce-endpoint-rest.git</url >
+		<tag >HEAD</tag >
+	</scm >
+
+	<distributionManagement >
+		<repository >
+			<id >github</id >
+			<name >GitHub ErpMicroServices Apache Maven Packages</name >
+			<url >https://maven.pkg.github.com/ErpMicroServices/e_commerce-endpoint-rest</url >
+		</repository >
+	</distributionManagement >
 	<properties >
 		<java.version >11</java.version >
 	</properties >
