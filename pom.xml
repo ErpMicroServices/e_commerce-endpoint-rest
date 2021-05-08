@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>org.erpmicroservices.e_commerce.endpoint.rest</groupId>
 	<artifactId>e_commerce-endpoint-rest</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>e_commerce-endpoint-rest</name>
 	<description>Restful HATEOAS endpoints for E-Commerce</description>
 	<scm>
